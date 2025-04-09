@@ -98,7 +98,6 @@ for (let i = 0; i <= 10; i++) {
 }
 
 //Ejercicio 10: Con un bucle for in imprime en pantalla todos los nombres, apellidos y su aporte a la sociedad de las programadoras de la historia contenidas en el array llamado 'programmers', Deberás imprimir el índice y la información de cada una de ellas de la siguiente manera: '0: Ada Lovelace, su aporte fue la máquina analítica'.
-
 const programmers = [
 	{
 		name: 'Ada',
@@ -121,29 +120,45 @@ const programmers = [
 		knowledge: 'el wifi',
 	},
 ];
-
-//Escribe tu código aquí
+programmers.forEach((programmer, index) => {
+	console.log(`${index}: ${programmer.name} ${programmer.lastname}, su aporte fue ${programmer.knowledge}`);
+});
 
 //Ejercicio 11: Con un bucle for of imprime en consola "Hola, mi nombre es ... " y reemplaza los tres puntos con cada nombre del array dado.
-
 const names = ['Carla', 'Alex', 'Judith', 'Maria', 'Noelia'];
-
-//Escribe tu código aquí
+for (nombre of names){
+    console.log(`Hola, mi nombre es ${nombre}`);
+}
 
 //Ejercicio 12: Con un bucle while imprime en consola una lista del 1 al 5.
-
-//Escribe tu código aquí
+let i = 1;
+while (i < 6){
+    console.log(i);
+    i++;
+}
 
 //Ejercicio 13: Realiza el mismo ejercicio anterior pero con un bucle do while.
-
-//Escribe tu código aquí
+let x = 1;
+do {
+    console.log(x);
+    x++; 
+} while (x < 6)
 
 //Ejercicio 14: Saludo Personalizado
 //Crea una función llamada saludar que tome un parámetro llamado nombre y devuelva un saludo personalizado. Luego, llama a la función con diferentes nombres y muestra el resultado en la consola.
-
-//Escribe tu código aquí
+let saludar = (nombre) => {
+    console.log(`Hola, ${nombre}!`);
+}
+saludar('Cris');
+saludar('Víctor');
+saludar('Carla');
 
 //Ejercicio 15: Calcular el Área de un Rectángulo
 //Crea una función llamada calcularAreaRectangulo que tome dos parámetros (ancho y alto) y devuelva el área del rectángulo. Luego, llama a la función con diferentes valores de ancho y alto y muestra el resultado en la consola.
-
-//Escribe tu código aquí
+let calcularAreaRectangulo = (ancho, alto) => {
+    area = ancho * alto
+    console.log(`El área del rectángulo es ${area}`)
+}
+calcularAreaRectangulo(3,4);
+calcularAreaRectangulo(5,7);
+calcularAreaRectangulo(15.2,6.8);
