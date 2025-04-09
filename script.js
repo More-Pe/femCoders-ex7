@@ -65,24 +65,37 @@ switch (pet2) {
 }
 
 //Ejercicio 6: Usando un operador ternario, escribe un programa que lea la constante weather e imprima en consola si es soleado "Me vestiré con un vestido" y si no es así que imprima "Me vestiré con pantalón"
-
 const weather = 'soleado';
-
-const result = console.log(result); //Escribe tu código aquí;
+const result =
+	weather === 'soleado'
+		? 'Me vestiré con un vestido'
+		: 'Me vestiré con pantalón';
+console.log(result);
 
 //Ejercicio 7: cambia el valor de weather a "frío" y mira el resultado en consola para comprobar que tu código funciona bien.
+const weather1 = 'frío';
+const result1 =
+	weather1 === 'soleado'
+		? 'Me vestiré con un vestido'
+		: 'Me vestiré con pantalón';
+console.log(result1);
 
 //Ejercicio 8: Escribe un programa que al darle la constante 'value' imprima en consola "Es un número" cuando el valor sea de tipo number, "Es un string" cuando el valor sea de tipo string o si no es ni uno ni otro que imprima "No es ni número ni string". Puedes hacerlo con cualquier tipo de condicional.
-
 const value = '1';
-
-//Escribe tu código aquí
+if (typeof value === 'number') {
+	console.log('Es un número');
+} else if (typeof value === 'string') {
+	console.log('Es un string');
+} else {
+	console.log('No es ni número ni string');
+}
 
 //BUCLES
 
 //Ejercicio 9: Imprime en consola una lista del 0 al 10 con el bucle for
-
-//Escribe tu código aquí
+for (let i = 0; i <= 10; i++) {
+	console.log(i);
+}
 
 //Ejercicio 10: Con un bucle for in imprime en pantalla todos los nombres, apellidos y su aporte a la sociedad de las programadoras de la historia contenidas en el array llamado 'programmers', Deberás imprimir el índice y la información de cada una de ellas de la siguiente manera: '0: Ada Lovelace, su aporte fue la máquina analítica'.
 
